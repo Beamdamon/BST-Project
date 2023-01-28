@@ -10,7 +10,7 @@ using namespace std;
 int main()
 {
 
-    int TreeKeys[16] = { 50, 76, 21, 4, 32, 64, 15, 52, 14, 100, 83, 2, 3, 70, 87, 80};
+    int key;
     BST myTree;
 
         myTree.InorderTraverse();
@@ -25,7 +25,12 @@ int main()
 
         myTree.InorderTraverse();
 
-        cout << "Printing the Tree in order\n";
+        cout << endl << endl << "The smallest number in the tree is " << myTree.FindMinimum() << endl;
+        cout << "The largest number in the tree is " << myTree.FindMaximum() << endl;
+
+        cout << endl << "Find a number in the tree\n";
+        cin >> key;
+        myTree.PrintFindNode(key);
 
 
     return 0;

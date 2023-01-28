@@ -116,3 +116,79 @@ BST::node* BST::FindNodePrivate(int key, node* Ptr)
 		return NULL;
 	}
 }
+
+int BST::ReturnRootKey()
+{
+	if (root != NULL)
+	{
+		return root->key;
+	}
+	else
+	{
+		return -10;
+	}
+}
+
+void BST::PrintFindNode(int key)
+{
+	node* Ptr = FindNode(key);
+
+	if (Ptr != NULL)
+	{
+		cout << Ptr->key << " Is in the tree" << endl;
+	}
+	else
+	{
+		cout << "Key " << key << " is not in the tree.\n";
+	}
+}
+
+int BST::FindMinimum()
+{
+	return FindMinimumPrivate(root);
+}
+
+int BST::FindMinimumPrivate(node* Ptr)
+{
+	if (root == NULL)
+	{
+		cout << "The tree is empty\n";
+		return -10;
+	}
+	else
+	{
+		if (Ptr->left != NULL)
+		{
+			return FindMinimumPrivate(Ptr->left);
+		}
+		else
+		{
+			return Ptr->key;
+		}
+	}
+}
+
+int BST::FindMaximum()
+{
+	return FindMaximumPrivate(root);
+}
+
+int BST::FindMaximumPrivate(node* Ptr)
+{
+	if (root == NULL)
+	{
+		cout << "The tree is empty\n";
+		return -10;
+	}
+	else
+	{
+		if (Ptr->right != NULL)
+		{
+			return FindMaximumPrivate(Ptr->right);
+		}
+		else
+		{
+			return Ptr->key;
+		}
+	}
+}
