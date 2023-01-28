@@ -14,6 +14,7 @@ private:
 	
 	void AddLeafPrivate(int key, node* Ptr);
 	void InorderTraversePrivate(node* Ptr);
+	node* FindNodePrivate(int key, node* Ptr);
 
 public:
 
@@ -21,5 +22,5 @@ public:
 	node* CreateLeaf(int key);
 	void AddLeaf(int key);
 	void InorderTraverse();
-
+	node* FindNode(int key);
 };

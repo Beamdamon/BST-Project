@@ -25,5 +25,8 @@ int main()
 
         myTree.InorderTraverse();
 
+        cout << "Printing the Tree in order\n";
+
+
     return 0;
 }
