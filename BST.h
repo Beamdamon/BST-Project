@@ -17,6 +17,9 @@ private:
 	node* FindNodePrivate(int key, node* Ptr);
 	int FindMinimumPrivate(node* Ptr);
 	int FindMaximumPrivate(node* Ptr);
+	void RemoveNodePrivate(int key, node* parent);
+	void RemoveRootMatch();
+	void RemoveMatch(node* parent, node* match, bool left);
 
 public:
 
@@ -29,4 +32,5 @@ public:
 	void PrintFindNode(int key);
 	int FindMinimum();
 	int FindMaximum();
+	void RemoveNode(int key);
 };
