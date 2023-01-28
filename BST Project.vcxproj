@@ -128,6 +128,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BST Project.cpp" />
+    <ClCompile Include="BST.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BST.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
