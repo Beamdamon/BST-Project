@@ -19,3 +19,42 @@ BST::node* BST::CreateLeaf(int key)
 
 	return n;
 }
+
+void BST::AddLeaf(int key)
+{
+	AddLeafPrivate(key, root);
+}
+
+void BST::AddLeafPrivate(int key, node* Ptr)
+{
+	if (root = NULL)
+	{
+		root = CreateLeaf(key);
+	}
+	else if (key < Ptr->key)
+	{
+		if (Ptr->left != NULL)
+		{
+			AddLeafPrivate(key, Ptr->left);
+		}
+		else
+		{
+			Ptr->left = CreateLeaf(key);
+		}
+	}
+	else if (key > Ptr->key)
+	{
+		if (Ptr->right != NULL)
+		{
+			AddLeafPrivate(key, Ptr->right);
+		}
+		else
+		{
+			Ptr->right = CreateLeaf(key);
+		}
+	}
+	else
+	{
+		cout << "The key " << key << " Is already in the tree\n";
+	}
+}

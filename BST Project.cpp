@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 
-#include "BST.cpp"
+#include "BST.h"
 
 using namespace std;
 
