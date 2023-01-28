@@ -1,9 +1,11 @@
 #include <iostream>
 #include <cstdlib>
+#include <Chrono>
 
 #include "BST.h"
 
 using namespace std;
+using namespace std::chrono;
 
 BST::BST()
 {
@@ -121,6 +123,7 @@ BST::node* BST::FindNodePrivate(int key, node* Ptr)
 	}
 }
 
+//Prints the node found from the FindNode Function.
 void BST::PrintFindNode(int key)
 {
 	node* Ptr = FindNode(key);
@@ -135,6 +138,7 @@ void BST::PrintFindNode(int key)
 	}
 }
 
+//Finds the minimum value in the tree by recursively moving to the very far left of the tree.
 int BST::FindMinimum()
 {
 	return FindMinimumPrivate(root);
@@ -160,6 +164,7 @@ int BST::FindMinimumPrivate(node* Ptr)
 	}
 }
 
+//Finds the maximum value in the tree by recursively moving to the very far right of the tree.
 int BST::FindMaximum()
 {
 	return FindMaximumPrivate(root);
@@ -185,9 +190,12 @@ int BST::FindMaximumPrivate(node* Ptr)
 	}
 }
 
+//Removal functions below finds the match, deletes it, then reconstructs the tree.
+
 void BST::RemoveNode(int key)
 {
 	return RemoveNodePrivate(key, root);
+
 }
 
 void BST::RemoveNodePrivate(int key, node* parent)
