@@ -12,12 +12,14 @@ private:
 
 	node* root;
 	
-	void AddLeafPrivate(int key, node* Ptr );
+	void AddLeafPrivate(int key, node* Ptr);
+	void InorderTraversePrivate(node* Ptr);
 
 public:
 
 	BST();
 	node* CreateLeaf(int key);
 	void AddLeaf(int key);
+	void InorderTraverse();
 
 };

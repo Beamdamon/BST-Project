@@ -27,7 +27,7 @@ void BST::AddLeaf(int key)
 
 void BST::AddLeafPrivate(int key, node* Ptr)
 {
-	if (root = NULL)
+	if (root == NULL)
 	{
 		root = CreateLeaf(key);
 	}
@@ -56,5 +56,32 @@ void BST::AddLeafPrivate(int key, node* Ptr)
 	else
 	{
 		cout << "The key " << key << " Is already in the tree\n";
+	}
+}
+
+void BST::InorderTraverse()
+{
+	InorderTraversePrivate(root);
+}
+
+void BST::InorderTraversePrivate(node* Ptr)
+{
+	if (root != NULL)
+	{
+		if (Ptr->left != NULL)
+		{
+			InorderTraversePrivate(Ptr->left);
+		}
+		
+		cout << Ptr->key << " ";
+
+		if (Ptr->right != NULL)
+		{
+			InorderTraversePrivate(Ptr->right);
+		}
+	}
+	else
+	{
+		cout << "The tree is empty.\n";
 	}
 }
