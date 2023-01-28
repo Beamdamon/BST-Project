@@ -28,7 +28,6 @@ public:
 	void AddLeaf(int key);
 	void InorderTraverse();
 	node* FindNode(int key);
-	int ReturnRootKey();
 	void PrintFindNode(int key);
 	int FindMinimum();
 	int FindMaximum();

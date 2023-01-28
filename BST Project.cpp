@@ -15,16 +15,18 @@ int main()
 
     myTree.InorderTraverse();
 
+    //Creates the Tree
     for (int i = 0; i < 100; i++)
     {
         myTree.AddLeaf(rand());
     }
 
-
+    //Prints the tree
     cout << "Printing the Tree in order\n";
 
     myTree.InorderTraverse();
 
+    //Displays the menu, and gives the options to display, find a value, delete a value, and to display the minumum and maximum values.
     while (key != 5)
     {
         cout << endl << "Menu" << endl;

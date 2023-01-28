@@ -10,6 +10,7 @@ BST::BST()
 	root = NULL;
 }
 
+// Creates a new node
 BST::node* BST::CreateLeaf(int key)
 {
 	node* n = new node;
@@ -20,6 +21,7 @@ BST::node* BST::CreateLeaf(int key)
 	return n;
 }
 
+// Adds a new leaf to the tree by recursively going through the tree to see if the key value is < > or = to the current value being looked at
 void BST::AddLeaf(int key)
 {
 	AddLeafPrivate(key, root);
@@ -59,6 +61,7 @@ void BST::AddLeafPrivate(int key, node* Ptr)
 	}
 }
 
+// Recursively goes through the tree to put the values of the tree in numerical order
 void BST::InorderTraverse()
 {
 	InorderTraversePrivate(root);
@@ -86,6 +89,7 @@ void BST::InorderTraversePrivate(node* Ptr)
 	}
 }
 
+// Recursively goes through the tree until the ptr->key == key
 BST::node* BST::FindNode(int key)
 {
 	return FindNodePrivate(key, root);
@@ -114,18 +118,6 @@ BST::node* BST::FindNodePrivate(int key, node* Ptr)
 	else
 	{
 		return NULL;
-	}
-}
-
-int BST::ReturnRootKey()
-{
-	if (root != NULL)
-	{
-		return root->key;
-	}
-	else
-	{
-		return -10;
 	}
 }
 
